@@ -1,7 +1,7 @@
 require "pry"
 require "httparty"
 require "json"
-require "codechamp/version"
+# require "codechamp/version"
 
 module Codechamp
   class App
