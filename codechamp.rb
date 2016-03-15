@@ -25,9 +25,6 @@ module Codechamp
       App.get("/repos/#{@org}/#{@repo}/stats/contributors", headers: @headers)
     end
 
-    def process_user(user)
-    end
-
     def get_usernames
       results = []
       set_contributions
@@ -138,6 +135,7 @@ puts "Enter the owner/organization to get data about from Github:"
 org = gets.chomp
 puts "Enter the repo to get data about from Github:"
 repo = gets.chomp
+puts "Enter 'run.table' to get a formated table with sorting options"
 
 run = Codechamp::App.new(auth_token, org, repo)
 binding.pry
